@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niraksh AI - Symptom Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Niraksh <span>AI</span></h1>
+            <p>Smart Medical Diagnostic Assistant</p>
+        </header>
+
+        <div class="main-card glass-panel">
+            <div class="input-section">
+                <label for="symptom-input">Describe your symptoms in detail:</label>
+                <textarea id="symptom-input" placeholder="E.g., I have a severe headache, sensitivity to light, and nausea..."></textarea>
+                <button id="analyze-btn" class="primary-btn">
+                    <span class="btn-text">Analyze Symptoms</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </div>
+
+            <div id="results-section" class="results-section hidden">
+                <div class="result-box disease-box">
+                    <h3>Predicted Condition</h3>
+                    <h2 id="predicted-disease" class="gradient-text">---</h2>
+                </div>
+
+                <div class="result-box analysis-box">
+                    <h3>Analysis</h3>
+                    <p id="analysis-text">---</p>
+                </div>
+
+                <div class="split-results">
+                    <div class="result-box list-box">
+                        <h3>Recommended Action / Remedies</h3>
+                        <ul id="remedies-list">
+                            <li>---</li>
+                        </ul>
+                    </div>
+
+                    <div class="result-box list-box">
+                        <h3>Suggested Specialists</h3>
+                        <ul id="doctors-list">
+                            <li>---</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button id="reset-btn" class="secondary-btn">Check Another Symptom</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
